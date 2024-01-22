@@ -6,7 +6,7 @@
 #E8D8C4 */
 
 #root {
-  max-width: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -15,6 +15,8 @@ body{
   /* background-color: #561C24; */
   background-color: #612121;
 background-image: linear-gradient(43deg, #612121 0%, #730923 46%, #b50f1a 100%);
-
 }
 
+.main{
+  flex-grow: 1;
+}
