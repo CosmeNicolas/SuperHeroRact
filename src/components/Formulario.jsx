@@ -10,12 +10,12 @@ const Formulario = () => {
 
     /* Consumo de API  */
     const publicKey = '5cab833b6006af603f7691db641a2373';
-    const MostrarApi = async ()=>{
+    const MostrarApi = async (buscarComic)=>{
       try {
         const ts = 2000
         const hash = (`1b77f26bd6206b4e08e30562e6d1f39b`)
         const respuestaApiHero = await fetch(`
-        http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`)
+        http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}&titleStartsWith=${buscarComic}`)
         const datos  = await respuestaApiHero.json()
         /* chequear si todo va bien  */
         if(respuestaApiHero.ok){
@@ -33,7 +33,7 @@ const Formulario = () => {
       }
     const handleSubmit = (e) => {
         e.preventDefault()
-        MostrarApi();
+        MostrarApi(BuscarHeroe);
         }
           /* Termina consumo de API  */
 
@@ -49,7 +49,7 @@ const Formulario = () => {
          value={BuscarHeroe}
          onChange={(e)=>setBuscarHeroe(e.target.value)}/>
       </Form.Group>
-      <Button onClick={MostrarApi} className="mt-3 ms-1" variant="dark" type="submit">
+      <Button  className="mt-3 ms-1" variant="dark" type="submit">
         Consultar
       </Button>
     </Form>
