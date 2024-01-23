@@ -1,10 +1,10 @@
-import {  Card , Col, Row, Container  } from "react-bootstrap";
+import {  Card , Col, Row, Container, Alert  } from "react-bootstrap";
 
 const Items = ({ datoHeroe }) => {
-  /* if(!datoHeroe){
+  if(!datoHeroe){
       return
        <Alert variant="primary"> No hay datos de SuperHeroe</Alert>
-  } */
+  } 
   return (
     <>
     <Container >
@@ -12,15 +12,10 @@ const Items = ({ datoHeroe }) => {
       {datoHeroe.map((itemHeroe, idHeroe) => {
          return (
           <Col  key={idHeroe}  >
-          <Card className="card-comic mt-2">
-          <Card.Img variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`} fluid />
-            <Card.Body>
-              <Card.Title>{itemHeroe.title}</Card.Title>
-              <Card.Text>
-                Aqui va el texto
-              </Card.Text>
+          <Card className="card-with-hover mt-2">
+          <Card.Img className="" variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`}  />
+         
             {/*   <Button variant="primary">Go somewhere</Button> */}
-            </Card.Body>
           </Card>
           </Col>
         )
