@@ -41,7 +41,7 @@ function App() {
     <>
      <Container className="main">
       <Imagen/>
-      <h1 className="text-light text-center mt-5">Super Hero</h1>
+      <h1 className="text-light text-center mt-5 fuente">Super Heroe</h1>
       <Formulario BuscarHeroe={BuscarHeroe}  setBuscarHeroe={setBuscarHeroe}  MostrarApi={MostrarApi} datoHeroe={datoHeroe} />
      </Container>
      <Footer/>

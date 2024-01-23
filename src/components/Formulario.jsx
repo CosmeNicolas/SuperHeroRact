@@ -18,8 +18,11 @@ const Formulario = ({BuscarHeroe,setBuscarHeroe,MostrarApi, datoHeroe}) => {
       <>
 
        <Form onSubmit={handleSubmit} className="d-flex flex-row align-items-center justify-content-center">
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label className="text-light">Buscar SuperHeroe</Form.Label>
+      <div className="text-center">
+      <Form.Group  controlId="formBasicEmail">
+        <Form.Label className="text-light text-center">
+          Buscar SuperHeroe
+          </Form.Label>
         <Form.Control
          type="text" 
          placeholder="Buscar SuperHeroe" 
@@ -29,6 +32,7 @@ const Formulario = ({BuscarHeroe,setBuscarHeroe,MostrarApi, datoHeroe}) => {
       <Button  className="mt-3 ms-1" variant="dark" type="submit">
         Consultar
       </Button>
+      </div>
     </Form>
     <Items datoHeroe={datoHeroe} />
     </>

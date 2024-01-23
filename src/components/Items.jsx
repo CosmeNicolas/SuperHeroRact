@@ -12,15 +12,15 @@ const Items = ({ datoHeroe }) => {
       {datoHeroe.map((itemHeroe) => {
          return (
           <Col  key={itemHeroe.id}  >
-          <Card className="card-with-hover my-2">
+          <Card className="card-with-hover my-2 bg bg-dark">
           <Card.Img className="" variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`}  />
-          <ListGroup variant="flush">
-            <ListGroup.Item>{itemHeroe.title}</ListGroup.Item>
-            <ListGroup.Item>Precio: ${itemHeroe.prices[0].price} </ListGroup.Item>
-            <ListGroup.Item>Format: {itemHeroe.format} </ListGroup.Item>
+          <ListGroup className="bg bg-black" variant="flush">
+            <ListGroup.Item className="bg bg-dark text-light">{itemHeroe.title}</ListGroup.Item>
+            <ListGroup.Item className="bg bg-dark text-light">Precio: ${itemHeroe.prices[0].price} </ListGroup.Item>
+            <ListGroup.Item className="bg bg-dark text-light">Format: {itemHeroe.format} </ListGroup.Item>
           </ListGroup>
-          <Card.Body>
-             <Button href={itemHeroe.urls[0].url} variant="primary">Go somewhere</Button> 
+          <Card.Body className="bg bg-dark text-center" > 
+             <Button className="fuente" href={itemHeroe.urls[0].url} variant="danger">Ver Mas</Button> 
           </Card.Body>
           </Card>
           </Col>

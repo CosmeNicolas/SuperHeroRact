@@ -1,12 +1,13 @@
-import { Image , Container} from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 import heroes from '../assets/heroes.png'
 
 const Imagen = () => {
   return (
     <>
-    <Container fluid className='text-center mt-5'>
-    <Image src={heroes} />
-    </Container>
+    <dir className="text-center" >
+    <Image src={heroes} fluid  className='mt-3 py-1'/>
+    </dir>
+   
     </>
   )
 }

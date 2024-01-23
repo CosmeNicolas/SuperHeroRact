@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /* colores 
 #612121
 #561C24
 #6D2932
 #C7B7A3
-#E8D8C4 */
+#E8D8C4
+
+font-family: 'Permanent Marker', cursive;
+
+*/
 
 #root {
   min-height: 100vh;
@@ -24,5 +29,12 @@ background-image: linear-gradient(43deg, #251212 0%, #2d0c14 46%, #3e1013 100%);
 .card-with-hover:hover {
   filter: brightness(90%);
   transition: filter 0.3s ease;
+}
+.fuente{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.fondo{
+  background-color: #251212;
 }
 
