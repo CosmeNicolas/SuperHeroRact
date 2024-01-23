@@ -11,7 +11,7 @@ const Formulario = ({BuscarHeroe,setBuscarHeroe,MostrarApi, datoHeroe}) => {
         e.preventDefault()
         MostrarApi(BuscarHeroe);
         }
-          /* Termina consumo de API  */
+         
 
 
   return (
