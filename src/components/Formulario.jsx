@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap"
 useState
+import Items from "./Items";
 
 
 const Formulario = () => {
@@ -37,7 +38,7 @@ const Formulario = () => {
 
 
   return (
-
+      <>
        <Form onSubmit={handleSubmit} className="d-flex flex-row align-items-center justify-content-center">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className="text-light">Buscar SuperHeroe</Form.Label>
@@ -51,6 +52,8 @@ const Formulario = () => {
         Submit
       </Button>
     </Form>
+    <Items/>
+    </>
   )
 }
 
