@@ -4,13 +4,13 @@ import {Container} from 'react-bootstrap'
 import { useState } from "react"
 import Footer from "./components/Footer"
 import Formulario from "./components/Formulario"
-import Carrusel from "./components/Carrusel"
+import Imagen from "./components/Imagen"
 
 
 
 function App() {
   const [BuscarHeroe, setBuscarHeroe] = useState('')
-    const [datoHeroe, setDatoHeroe] =useState([])
+  const [datoHeroe, setDatoHeroe] =useState([])
 
     /* Consumo de API  */
     const publicKey = '5cab833b6006af603f7691db641a2373';
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
      <Container className="main">
-      <Carrusel/>
+      <Imagen/>
       <h1 className="text-light text-center mt-5">Super Hero</h1>
       <Formulario BuscarHeroe={BuscarHeroe}  setBuscarHeroe={setBuscarHeroe}  MostrarApi={MostrarApi} datoHeroe={datoHeroe} />
      </Container>
