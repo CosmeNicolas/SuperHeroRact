@@ -19,7 +19,7 @@ function App() {
         const ts = 2000
         const hash = (`1b77f26bd6206b4e08e30562e6d1f39b`)
         const respuestaApiHero = await fetch(`
-        https://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}&titleStartsWith=${hulk}`)
+        https://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}&titleStartsWith=${buscarComic}`)
         const datos  = await respuestaApiHero.json()
         /* chequear si todo va bien  */
         if(respuestaApiHero.ok){
