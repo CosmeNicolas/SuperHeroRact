@@ -10,10 +10,6 @@ const Formulario = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-    }
-
-
-
         /* Consumo de API  */
             const publicKey = '5cab833b6006af603f7691db641a2373';
             const MostrarApi = async ()=>{
@@ -32,7 +28,12 @@ const Formulario = () => {
           
             }
             MostrarApi()
+            setBuscarHeroe(BuscarHeroe)
          /* Termina consumo de API  */
+    }
+
+
+
 
 
 
@@ -52,7 +53,7 @@ const Formulario = () => {
         Submit
       </Button>
     </Form>
-    <Items/>
+    <Items BuscarHeroe={BuscarHeroe}/>
     </>
   )
 }
