@@ -37,7 +37,7 @@ background-image: linear-gradient(43deg, #251212 0%, #2d0c14 46%, #3e1013 100%);
 
 @media (min-width: 992px) {
   .img-card{
-    height: 100%; /* Ajusta la altura al 100% para ocupar el espacio disponible en el contenedor padre */
+    
     display: flex;
     flex-direction: column;
   }
@@ -47,6 +47,13 @@ background-image: linear-gradient(43deg, #251212 0%, #2d0c14 46%, #3e1013 100%);
     margin-bottom: 20px; /* Añade un espacio entre las tarjetas si lo deseas */
   }
 }
+
+
+
+
+
+
+
 
 
 

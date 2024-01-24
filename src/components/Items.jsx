@@ -8,8 +8,8 @@ const Items = ({ datoHeroe }) => {
       <Row  xs={1} md={2} xl={4}>
       {datoHeroe.map((itemHeroe) => {
          return (
-          <Col className="img-card"  key={itemHeroe.id}  >
-          <Card className=" my-2 bg bg-dark">
+          <Col className="my-2"  key={itemHeroe.id}  >
+          <Card className=" bg bg-dark h-100">
           <Card.Img  variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`}  />
           <ListGroup className="bg bg-black" variant="flush">
             <ListGroup.Item className="bg bg-dark text-light">{itemHeroe.title}</ListGroup.Item>
