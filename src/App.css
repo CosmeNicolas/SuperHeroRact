@@ -26,10 +26,7 @@ background-image: linear-gradient(43deg, #251212 0%, #2d0c14 46%, #3e1013 100%);
   flex-grow: 1;
 }
 
-.card-with-hover:hover {
-  filter: brightness(90%);
-  transition: filter 0.3s ease;
-}
+
 .fuente{
   font-family: 'Permanent Marker', cursive;
 }
@@ -37,4 +34,19 @@ background-image: linear-gradient(43deg, #251212 0%, #2d0c14 46%, #3e1013 100%);
 .fondo{
   background-color: #251212;
 }
+
+@media (min-width: 992px) {
+  .img-card{
+    height: 100%; /* Ajusta la altura al 100% para ocupar el espacio disponible en el contenedor padre */
+    display: flex;
+    flex-direction: column;
+  }
+  .img-card .card {
+    flex: 1; /* Permite que la tarjeta ocupe todo el espacio disponible en el contenedor hijo */
+    height: 100%; /* Ajusta la altura de la tarjeta al 100% para ocupar el espacio disponible en el contenedor hijo */
+    margin-bottom: 20px; /* Añade un espacio entre las tarjetas si lo deseas */
+  }
+}
+
+
 
