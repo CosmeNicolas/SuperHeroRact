@@ -7,7 +7,6 @@ import Formulario from "./components/Formulario"
 import Imagen from "./components/Imagen"
 
 
-
 function App() {
   const [BuscarHeroe, setBuscarHeroe] = useState('')
   const [datoHeroe, setDatoHeroe] =useState([])
@@ -35,7 +34,6 @@ function App() {
         }
     
       }
-
 
   return (
     <>

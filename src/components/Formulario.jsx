@@ -3,16 +3,12 @@ import { Form, Button } from "react-bootstrap"
 useState
 import Items from "./Items";
 
-
-
 const Formulario = ({BuscarHeroe,setBuscarHeroe,MostrarApi, datoHeroe}) => {
    
     const handleSubmit = (e) => {
         e.preventDefault()
         MostrarApi(BuscarHeroe);
         }
-         
-
 
   return (
       <>

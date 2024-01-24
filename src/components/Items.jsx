@@ -1,10 +1,7 @@
 import {  Card , Col, Row, Container, Alert, ListGroup , Button } from "react-bootstrap";
 
 const Items = ({ datoHeroe }) => {
-  if(!datoHeroe){
-      return
-       <Alert variant="primary"> No hay datos de SuperHeroe</Alert>
-  } 
+ 
   return (
     <>
     <Container >
@@ -23,10 +20,14 @@ const Items = ({ datoHeroe }) => {
              <Button className="fuente" href={itemHeroe.urls[0].url} variant="danger">Ver Mas</Button> 
           </Card.Body>
           </Card>
+          
           </Col>
         )
       })}
       </Row>
+      {datoHeroe.length === 0 && <Alert variant="danger" className="mt-2 fuente text-dark">
+           No se encontraron conmics 
+          </Alert> }
     </Container>
     </>
   );
