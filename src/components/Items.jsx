@@ -10,17 +10,20 @@ const Items = ({ datoHeroe }) => {
          return (
           <Col className="my-2"  key={itemHeroe.id}  >
           <Card className=" bg bg-dark h-100">
-          <Card.Img  variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`}  />
+          <Card.Img className="img-inCard"  variant="top" src={`${itemHeroe.thumbnail.path}.${itemHeroe.thumbnail.extension}`}  />
+          <Card.ImgOverlay className="img-overlay">
+                <Card.Title className="card-title text-dark">{itemHeroe.title}</Card.Title>
+            </Card.ImgOverlay>
           <ListGroup className="bg bg-black" variant="flush">
-            <ListGroup.Item className="bg bg-dark text-light">{itemHeroe.title}</ListGroup.Item>
             <ListGroup.Item className="bg bg-dark text-light">Precio: ${itemHeroe.prices[0].price} </ListGroup.Item>
-            <ListGroup.Item className="bg bg-dark text-light">Format: {itemHeroe.format} </ListGroup.Item>
+            <ListGroup.Item className="bg bg-dark text-light">Format: {itemHeroe.format}  </ListGroup.Item>
           </ListGroup>
+          <div className="py-2">
           <Card.Body className="bg bg-dark text-center" > 
-             <Button className="fuente" href={itemHeroe.urls[0].url} variant="danger">Ver Mas</Button> 
+             <Button className="fuente d-flex flex-column align-items-center" href={itemHeroe.urls[0].url} variant="danger">Ver Mas</Button> 
           </Card.Body>
+          </div>
           </Card>
-          
           </Col>
         )
       })}
