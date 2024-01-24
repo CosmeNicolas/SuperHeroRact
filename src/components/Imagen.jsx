@@ -5,7 +5,7 @@ const Imagen = () => {
   return (
     <>
     <dir className="text-center" >
-    <Image src={heroes} fluid  className='mt-3 py-1'/>
+    <Image src={heroes} fluid  className='mt-3 p-1 '/>
     </dir>
    
     </>
